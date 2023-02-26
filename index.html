@@ -38,6 +38,9 @@
         transition: background-color 1s ease-in-out;
         background-color: #000;
       }
+      p {
+        color: #fff;
+      }
     </style>
   </head>
   <body>
@@ -163,6 +166,10 @@ Developer Advocate Engineer at <a href="https://hf.co/">Hugging Face</a>, GDE in
         var colorCode = "#" + Math.floor(Math.random()*16777215).toString(16);
         // Apply the new color as the background color
         document.body.style.backgroundColor = colorCode;
+        // Calculate the inverse color
+        var inverseColor = "#" + (0xFFFFFF ^ parseInt(colorCode.substring(1),16)).toString(16);
+        // Apply the inverse color as the text color
+        document.getElementsByTagName("p")[0].style.color = inverseColor;
         // Wait 1 second and call the function again
         setTimeout(changeColor, 1000);
       }
