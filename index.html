@@ -5,14 +5,24 @@
     <title>Random Background Color</title>
     <style>
         body {
-            /* transition: background-color 1s ease-in-out, color 1s ease-in-out; /* Add the transition property to apply the transition to both background color and text color */
+            margin: 0;
+			padding: 0;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 10vw;
+			font-weight: bold;
+			text-align: center;
+            transition: background-color 1s ease-in-out, color 1s ease-in-out; /* Add the transition property to apply the transition to both background color and text color */
             background-color: #000;
             color: #fff; /* Set the initial text color to white */
         }
     </style>
 </head>
 <body>
-    <p>Some text on the page</p>
+    Rishiraj<br>
+    Acharya
     <script>
         function changeColor() {
             // Generate a random color code
@@ -27,7 +37,7 @@
             // Apply the inverse color as the text color
             document.body.style.color = inverseColor;
             // Wait 1 second and call the function again
-            setTimeout(changeColor, 1000);
+            setTimeout(changeColor, 2000);
         }
         // Call the function to start the color change loop
         changeColor();
